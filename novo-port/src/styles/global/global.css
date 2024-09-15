@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+}
+
+body {
+  background-color: #261b31;
+}
+body a, body svg {
+  transition: 0.4s;
+}/*# sourceMappingURL=global.css.map */
