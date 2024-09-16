@@ -1,0 +1,48 @@
+#information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1d1d1d;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  width: 80%;
+  border-radius: 5px;
+}
+#information .info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #444;
+  width: 100%;
+}
+#information h3 {
+  color: #a6a6a6;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+#information p {
+  color: #fff;
+  font-weight: bold;
+}
+#information svg {
+  background-color: #111;
+  padding: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+}
+#information #phone-icon {
+  color: #e93b81;
+}
+#information #pin-icon {
+  color: #6ab5b9;
+}
+#information #email-icon {
+  color: #c17ceb;
+}/*# sourceMappingURL=InformationContainer.css.map */
