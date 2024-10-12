@@ -8,6 +8,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    @media (max-width: 768px) {
+      align-items: center;
+      justify-content: center;
+      margin-right: 10%;
+    }
 
     .technologies-card {
       @include mixins.center;
@@ -16,13 +21,29 @@
       border: 1px solid #333;
       width: 45%;
       border-radius: variables.$card-border-radius;
+      @media (max-width: 768px) {
+        width: 100%;
+        flex-wrap: wrap;
+      }
 
       h3 {
         color: variables.$text-color;
         margin-bottom: 1rem;
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p{
+        @media (max-width: 768px) {
+          font-size: .9rem;
+        }
       }
       svg {
         font-size: 6rem;
+        @media (max-width: 768px) {
+          font-size: 8rem;
+        }
       }
 
       &.html-card {
@@ -55,7 +76,6 @@
           color: #f0553a;
         }
       }
-
     }
   }
 }

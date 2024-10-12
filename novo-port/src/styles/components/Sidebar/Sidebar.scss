@@ -1,5 +1,5 @@
-@use '../../variables/variables.scss'  ;
-@use '../../mixins/mixins.scss' ;
+@use "../../variables/variables.scss" as variables;
+@use "../../mixins/mixins.scss" as mixins;
 
 #sidebar {
   background-color: variables.$bg-color;
@@ -12,11 +12,20 @@
   position: relative;
   padding: 3rem 0;
 
+  @media (max-width: 768px) {
+    margin-left: -1rem;
+  }
+
   img {
     max-width: 70%;
     border-radius: variables.$container-border-radius;
     position: absolute;
     top: -3rem;
+    @media (max-width: 576px) {
+      max-width: 80%;
+      top: -2rem;
+    }
+   
   }
 
   .title {
@@ -24,11 +33,18 @@
     background-color: variables.$bg-color-secondary;
     border-radius: variables.$card-border-radius;
     margin-top: 15rem;
-    padding: .8rem 1.2rem;
+    padding: 0.8rem 1.2rem;
+
+    @media (max-width: 768px) {
+      font-size: 17px;
+    }
   }
 
   .btn {
     @include mixins.btn;
-    margin-top: 1rem ;
+    margin-top: 1rem;
+    @media (max-width: 768px) {
+      font-size: 17px;
+    }
   }
 }

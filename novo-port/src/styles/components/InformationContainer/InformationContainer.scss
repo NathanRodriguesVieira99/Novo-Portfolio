@@ -1,8 +1,8 @@
-@use "../../variables/variables.scss";
-@use "../../mixins/mixins.scss";
+@use "../../variables/variables.scss" as variables;
+@use "../../mixins/mixins.scss" as mixins;
 
 #information {
-  @include mixins.center; 
+  @include mixins.center;
 
   flex-direction: column;
   background-color: variables.$bg-color-secondary;
@@ -11,6 +11,9 @@
   text-align: left;
   width: 80%;
   border-radius: variables.$card-border-radius;
+  @media (max-width: 768px) {
+    width: 98%;
+  }
 
   .info-card {
     @include mixins.center;
@@ -26,11 +29,19 @@
     color: variables.$text-color-secondary;
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 17px; 
+    }
   }
 
   p {
     color: variables.$text-color;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   svg {
@@ -39,6 +50,10 @@
     width: 2rem;
     height: 2rem;
     border-radius: variables.$card-border-radius;
+    @media (max-width: 768px) {
+    width: 2.5rem;
+    }
+  
   }
 
   #phone-icon {

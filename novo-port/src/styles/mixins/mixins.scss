@@ -20,3 +20,17 @@
   height: 3px;
   width: 30%;
 }
+
+
+// Mixins para responsividade
+@mixin respond-to($size) {
+  $breakpoint: map-get($breakpoints, $size);
+
+  @if $breakpoint {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint defined for `#{$size}`.";
+  }
+}
